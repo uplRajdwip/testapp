@@ -1,9 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import MuiTab from './common/MuiTab';
-import MuiRadio from './common/MuiRadio';
-import MuiCheckBox from './common/MuiCheckBox';
-import MuiSlider from './common/MuiSlider';
 
 function App() {
   return (
@@ -22,10 +18,6 @@ function App() {
           Learn React
         </a>
       </header> */}
-      {/* <MuiTab /> */}
-      {/* <MuiRadio /> */}
-      {/* <MuiCheckBox /> */}
-      {/* <MuiSlider /> */}
     </div>
   );
 }
