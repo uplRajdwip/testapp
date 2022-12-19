@@ -1,8 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import MuiTab from './common/MuiTab';
+import logo from "./logo.svg";
+import "./App.css";
+import MuiTab from "./common/MuiTab";
+import Stepper from "./common/Stepper";
 
 function App() {
+  const steps = [
+    "first step",
+    "second step",
+    "third step",
+    "four step",
+    "fifth step",
+  ];
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -19,7 +27,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <MuiTab />
+      {/* <MuiTab /> */}
+      <Stepper steps={steps} />
     </div>
   );
 }
