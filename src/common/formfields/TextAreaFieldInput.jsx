@@ -10,7 +10,7 @@ const TextAreaFieldInput = (props) => {
 		}
 	};
   return (
-    <div className={` flex flex-col ${props.extracls}`}>
+    <div className={`${props.extracls}`}>
       <label className={`h-8  ${props.labelCls}  text-[14px]`}>{props.label}</label>
       <TextField
         autoFocus={props.autoFocus}
@@ -27,7 +27,7 @@ const TextAreaFieldInput = (props) => {
         name={props.textinputname}
         multiline={true}
         rows={props.rows}
-        fullWidth={props.fullwidthState}
+        fullWidth={props.fullwidth}
         placeholder={props.placeholder}
         error={props.error}
         value={props.value}

@@ -27,7 +27,7 @@ const EmailFieldInput = (props) => {
     //     console.log(event ,"event")
     //   };
     return (
-    <div className={`textfieldinput flex flex-col ${props.extracls}`}>
+    <div className={`  ${props.extracls}`}>
     <label className="    text-[14px]">{props.label}</label>
     <TextField
       autoFocus={props.autoFocus}
@@ -44,7 +44,7 @@ const EmailFieldInput = (props) => {
       name={props.textinputname}
       multiline={props.multiline}
       rows={props.rows}
-      fullWidth={props.fullwidthState}
+      fullWidth={props.fullwidth}
       placeholder={props.placeholder}
       error={props.error}
       value={props.value}
@@ -63,7 +63,7 @@ const EmailFieldInput = (props) => {
       tabIndex={props.tabIndex}
       
     />
-    <p >{emailError}</p>
+    <p className='text-red-500'>{emailError}</p>
   </div>
   )
 }

@@ -34,21 +34,7 @@ console.log(name , "name")
       placeholder="Enter Your Name"
       onChange={handlechnge}
       />
-      <TextAreaFieldInput
-      label="hello"
-       placeholder="Your Message"
-       textinputname="message"
-       id="message" rows={6}
-       onChange={handlechnge}
-       />
-       <EmailFieldInput
-        label="Email"
-        placeholder="Your email"
-        textinputname="email"
-        id="email" 
-        onChange={handlechnge}
-        pattern='^.+@example\.com$'
-       />
+     
     </div>
   );
 }
