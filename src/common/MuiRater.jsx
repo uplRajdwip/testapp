@@ -2,6 +2,7 @@ import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
+import { useState } from 'react'
 
 const labels = {
   0.5: 'Useless',
@@ -16,13 +17,13 @@ const labels = {
   5: 'Excellent+',
 };
 
-const getLabelText=(value)=> {
+const getLabelText = (value) => {
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 
-const HoverRating=(props)=> {
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);
+const HoverRating = (props) => {
+  const [value, setValue] = useState(0.5);
+  const [hover, setHover] = useState(-1);
 
   return (
     <Box
@@ -37,19 +38,21 @@ const HoverRating=(props)=> {
         value={value}
         precision={0.5}
         size={props.size}
+        disabled={false}
+        max={props.max}
+        highlightSelectedOnly={false}
         getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
-          console.log(value);
+          console.log(newValue, "<-- Rating Value");
         }}
         onChangeActive={(event, newHover) => {
           setHover(newHover);
-          console.log(hover);
         }}
         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
       />
       {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+        <Box sx={{ ml: 6 }}>{labels[hover !== -1 ? hover : value]}</Box>
       )}
     </Box>
   );
