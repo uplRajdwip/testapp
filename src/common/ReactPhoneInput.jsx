@@ -5,7 +5,7 @@ import 'react-phone-input-2/lib/material.css'
 
 const ReactPhoneInput = (props) => {
   const [value, setValue] = useState()
-  console.log(value);
+  // console.log(value);
 
   // Countries to be included only 
   const onlyCountries = ['in', 'fr', 'us', 'ar', 'de', 'es']
