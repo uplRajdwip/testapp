@@ -1,6 +1,5 @@
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-// import { addDays } from 'date-fns';
 import { DateRangePicker } from 'react-date-range';
 import React, { useState } from 'react'
 
@@ -13,7 +12,6 @@ const ReactDateRange = (props) => {
             key: 'selection'
         }
     ]);
-    // console.log(state);
 
     return (
         <>

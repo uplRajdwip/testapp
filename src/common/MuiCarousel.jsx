@@ -9,7 +9,7 @@ import { Paper } from '@mui/material'
 
 const MuiCarousel = (props) => {
 
-    // const items = [
+    // const itemContents = [
     //     {
     //         name: "Random Name #1",
     //         description: "Probably the most random thing you have ever seen!",
@@ -48,7 +48,7 @@ const MuiCarousel = (props) => {
                 onChange={props.handleChange}
             >
                 {
-                    props.items?.map((item, id) =>
+                    props.itemContents?.map((item, id) =>
                         <div key={id} className={`flex justify-center items-center`}>
                             <Paper>
                                 <h2>{item.name}</h2>

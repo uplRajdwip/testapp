@@ -44,7 +44,6 @@ const HoverRating = (props) => {
         getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
-          console.log(newValue, "<-- Rating Value");
         }}
         onChangeActive={(event, newHover) => {
           setHover(newHover);
