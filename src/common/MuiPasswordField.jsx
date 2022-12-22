@@ -31,7 +31,7 @@ const MuiPasswordField = (props) => {
                 defaultValue={props.defaultValue}
                 disabled={props.disabled}
                 error={props.error}
-                fullWidth={false}
+                fullWidth={props.fullWidth}
                 helperText={props.helperText}
                 id={props.id}
                 inputProps={props.inputProps}
