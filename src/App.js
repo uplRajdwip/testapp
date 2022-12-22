@@ -4,6 +4,7 @@ import MuiTab from './common/MuiTab';
 import TextFieldInput from './common/formfields/TextFieldInput';
 import TextAreaFieldInput from './common/formfields/TextAreaFieldInput';
 import EmailFieldInput from './common/formfields/EmailFieldInput';
+import InputField from './common/formfields/InputField';
 
 function App() {
   const handlechnge = (event) =>{
@@ -28,12 +29,7 @@ console.log(name , "name")
         </a>
       </header> */}
       {/* <MuiTab /> */}
-      <TextFieldInput
-      label="name"
-      variant="outlined"
-      placeholder="Enter Your Name"
-      onChange={handlechnge}
-      />
+   <InputField/>
      
     </div>
   );
