@@ -1,7 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import MuiTab from './common/MuiTab';
+import TextFieldInput from './common/formfields/TextFieldInput';
+import TextAreaFieldInput from './common/formfields/TextAreaFieldInput';
+import EmailFieldInput from './common/formfields/EmailFieldInput';
+import InputField from './common/formfields/InputField';
 
 function App() {
+  const handlechnge = (event) =>{
+    const name = event.target.value;
+console.log(name , "name")
+  }
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -18,6 +28,9 @@ function App() {
           Learn React
         </a>
       </header> */}
+      {/* <MuiTab /> */}
+   <InputField/>
+     
     </div>
   );
 }
