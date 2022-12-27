@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PhoneInput from 'react-phone-input-2'
 import es from 'react-phone-input-2/lang/es.json'
 import 'react-phone-input-2/lib/material.css'
+// import 'react-phone-input-2/lib/bootstrap.css'
 
 const ReactPhoneInput = (props) => {
   const [value, setValue] = useState()
@@ -11,10 +12,13 @@ const ReactPhoneInput = (props) => {
   const onlyCountries = ['in', 'fr', 'us', 'ar', 'de', 'es']
 
   return (
-    <div className='flex justify-center items-center w-fit m-5'>
+    <div className={`flex justify-center items-center w-fit m-5 ${props.extracls}`}>
+      <label className="input-label">{props.label}</label>
       <PhoneInput
+        className={`${props.textnewclass ? props.textnewclass : ""}`}
         country={'in'}
         onlyCountries={onlyCountries}
+        disabled={props.disabled}
         // localization={es}
         placeholder="Enter phone number"
         inputProps={{
@@ -23,7 +27,7 @@ const ReactPhoneInput = (props) => {
           autoFocus: true
         }}
         enableSearch={true}
-        // masks={{in: '(...) ..-..-..'}}
+        masks={{in: '(...)-...-...'}}
         value={value}
         onChange={setValue}
         isValid={(value, country) => {
@@ -36,6 +40,9 @@ const ReactPhoneInput = (props) => {
           }
         }}
       />
+      {/* {props.errorText ?
+        (<p className={`${styles.phoneerror} pt-0.5 pl-1.5`}>{props.errorText}</p>) : null
+      } */}
     </div>
 
   )

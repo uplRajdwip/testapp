@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-material-ui-carousel": "^3.4.2",
     "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.2.13",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
